@@ -1,8 +1,21 @@
 import React from "react";
-import techmint from '../../images/techmint.jpg'
 import rejection from '../../images/rejection.svg'
 
-export default function ApplicationCard(){
+export default function ApplicationCard(props){
+
+    console.log(props)
+    const inVisible = {
+        visibility: "hidden"
+    }
+
+    const visible = {
+        visibility: "visible"
+    }
+
+    const styled = props.currentStage.isRejected ? visible: inVisible;
+    const processing = props.currentStage.inProcess.processing;
+
+
     return(
 
         <>
@@ -11,21 +24,47 @@ export default function ApplicationCard(){
                     
                     <div className="profile-details">
                         <div className="company-icon-container">
-                            <img className="company-icon" src={techmint} alt="" />
+                            <img 
+                            className="company-icon" 
+                            src={ `../../images/`+ props.companyImage} 
+                            alt="" 
+                            />
                         </div>
                         <div>
-                            <p className="job-role">Product Designer</p>
-                            <p className="applied-company">Techmint, <span>on site</span></p>
-                            <p className="job-location">Bengaluru, India</p>
+                            <p className="job-role">{props.role}</p>
+                            <p className="applied-company">
+                                {props.companyName}, 
+                                <span>
+                                    {props.isOnsite ? ` on site` : ` Work From Home`}
+                                </span>
+                            </p>
+                            <p className="job-location">{props.location}</p>
                         </div>
                     </div>
                     <div className="salary-details-container">
-                        <p className="salary-range">₹ 50K - ₹ 70K</p>
+                        <p className="salary-range">
+                            ₹ {props.salaryRange.lower} - ₹ {props.salaryRange.upper}
+                        </p>
                         <p className="salary-frequency">per month</p>
                     </div>
                     <div className="salary-status-container">
-                        <div className="salary-status btn">Rejected</div>
-                        <img className="rejection-info" src={rejection} alt="" />
+                        {props.currentStage.isRejected && <div className="salary-status btn btn-rejected">Rejected</div>}
+                        {
+                        processing && 
+                        <div className="process-container">
+                            <div className="salary-status btn btn-processing">In Process</div>
+                            <p className="chances">{props.currentStage.inProcess.chances}% Chances</p>
+                        </div>
+                        }
+                        
+                        {props.currentStage.selected && <div className="salary-status btn btn-selected">Selected</div>}
+                        {
+                        <img 
+                        className="rejection-info"
+                        style={styled} 
+                        src={rejection} 
+                        alt="" />
+                        }
                     </div>
                 </div>
         

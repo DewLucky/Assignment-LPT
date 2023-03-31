@@ -81,6 +81,7 @@ button, .btn {
   padding: 1rem 0;
   width: 100vw;
   background-color: var(--dark-bg);
+  z-index: 1000;
 }
 
 
@@ -132,6 +133,16 @@ button, .btn {
 
 .right-menu *{
   margin-right: 1.2rem;
+}
+
+.right-menu-item{
+  position: relative;
+}
+
+.right-menu .unvisited{
+  font-size: 10.5px;
+  top: -11px;
+  right: -6px;
 }
 
 .right-menu > img{
@@ -203,10 +214,30 @@ button, .btn {
 .dashboard-container{
   display: grid;
   gap: 1.7rem;
+  position: relative;
+}
+
+.unvisited{
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  background: #FFD600;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .dashboard-item{
   text-align: center;
+  position: relative;
+}
+
+.dashboard-item .unvisited{
+  font-size: var(--font-tiny);
+  top: -11px;
+  right: 1.9rem;
 }
 
 .sidebar-items img{
@@ -240,7 +271,7 @@ button, .btn {
 
 .main-section{
   word-wrap: break-word;
-  margin: 7rem 1rem 0 10rem;
+  margin: 7rem 1rem 0 8rem;
   height: 100vh;
   background: #F5F5F5;
 }
@@ -377,6 +408,10 @@ button, .btn {
   margin-bottom: 10px;
 }
 
+.myjobs-container, .job-search-container{
+  padding-left: 1rem;
+}
+
 .job-search-status p{
   font-size: var(--font-small);
   text-align: center;
@@ -472,8 +507,31 @@ button, .btn {
 
 .salary-status{
   font-size: var(--font-tiny);
+  padding: 5px 1.5rem;
+  border-radius: 10rem;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3px;
+}
+
+.btn-rejected{
   color: #AF0808;
   background: #FFAAAA;
+}
+
+.btn-selected{
+  background: #C4FFD1;
+  color: #00A324;
+}
+
+.btn-processing{
+  color: #AE9407;
+  background: #FFF3B2;
+}
+
+.chances{
+  color: red;
+  text-align: center;
+  font-size: 9px;
 }
 
 .suggested-sessions-container{

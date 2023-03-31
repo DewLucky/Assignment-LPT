@@ -1,11 +1,11 @@
 import React from 'react'
 import ApplicationCard from './ApplicationCard'
+import applicationsData from '../data/applicationsData';
 
 
 export default function MyJobs(){
 
-    const applicationList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+    const applicationData = applicationsData;
 
     return(
         <div className="myjobs">
@@ -26,9 +26,17 @@ export default function MyJobs(){
             <div className="applications-container">
                 <h2 className="applications-title">Applications</h2>
                 {
-                    applicationList.map((e)=>{
+                    applicationData.map((application)=>{
                         return(
-                            <ApplicationCard></ApplicationCard>
+                            <ApplicationCard
+                            companyImage = {application.companyImage}
+                            role = {application.role}
+                            isOnsite = {application.isOnsite}
+                            companyName = {application.companyName}
+                            location = {application.location}
+                            salaryRange = {application.salaryRange}
+                            currentStage = {application.currentStage}
+                            />
                         )
                     })
                 }

@@ -1,6 +1,6 @@
 import React from "react";
 import location from '../../images/location.svg'
-import cities from "../cities";
+import cities from "../data/cities";
 import FilterOption from "./FilterOptions";
 
 

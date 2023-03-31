@@ -32,6 +32,7 @@ function Leftsidebar() {
                     </div>
 
                     <div className='dashboard-item'>
+                        <span className="unvisited">3</span>
                         <img src={calander} alt="calander-icon" />
                         <p className="sidebar-title">Upcoming <br /> Events</p>
                     </div>

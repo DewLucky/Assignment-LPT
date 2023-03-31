@@ -24,9 +24,18 @@ const Header = () => {
             </div>
           </div>
           <div className="right-menu">
-            <img src={messageFill} alt="" />
-            <img src={bellFill} alt="" />
-            <img src={points} alt="" />
+            <div className="right-menu-item">
+              <span className="unvisited">3</span>
+              <img src={messageFill} alt="" />
+            </div>
+            <div className="right-menu-item">
+              <span className="unvisited">8</span>
+              <img src={bellFill} alt="" />
+            </div>
+            <div className="right-menu-item">
+              <span className="unvisited"></span>
+              <img src={points} alt="" />
+            </div>
             <div className="user-container">
               <img className="user-img" src={account} alt="" />
               <div>
