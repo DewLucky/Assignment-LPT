@@ -1,8 +1,19 @@
 import React from "react";
 import location from '../../images/location.svg'
 import cities from "../cities";
+import FilterOption from "./FilterOptions";
+
 
 export default function JobSearch(){
+
+    const [isFilterVisible, SetFilterVisible] = React.useState(false);
+
+    const cityList = cities.map((cities)=>{return cities.name}).sort()
+
+    function handleMouseClick(){
+        SetFilterVisible(prev => !prev);
+    }
+
     return(
 
         <>
@@ -24,12 +35,12 @@ export default function JobSearch(){
                         value=""
                     >
                         <option value="Anywhere" selected>Anywhere</option>
-                        {cities.map((city) => <option>{city.name}</option>)}
+                        {cityList.map((city) => <option>{city}</option>)}
                     </select>
-
+                 
                 </div>
                 <div className="filters-container">
-                    <div className="filter-icon-container">
+                    <div className="filter-icon-container" onClick={handleMouseClick}>
                         <svg className="filters-icon" width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.334656" y="0.898132" width="26.1214" height="2.05143" rx="1.02571" fill="#D9D9D9"/>
                         <rect x="3.61693" y="6.15039" width="19.5569" height="2.05143" rx="1.02571" fill="#D9D9D9"/>
@@ -39,6 +50,7 @@ export default function JobSearch(){
                     <p>filters</p>
                     <span>5</span>
                 </div>
+                {isFilterVisible && <FilterOption/>}
             </form>
             <div className="applied-filter-container">
                 <div className="applied-filter">

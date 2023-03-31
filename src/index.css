@@ -37,6 +37,11 @@ a:hover {
   color: #535bf2;
 }
 
+select{
+  border: none;
+  outline: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -292,6 +297,7 @@ button, .btn {
 
 .location-container select{
   border: none;
+  outline: none;
   width: 130px;
   color: #B5B1B1;
 }
@@ -299,6 +305,46 @@ button, .btn {
 .filters-container{
   padding: 0 1rem;
   border-radius: 12px;
+  position: relative;
+}
+
+.filter-option-container{
+  background: white;
+  position: absolute;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  top: 13rem;
+  right: 25rem;
+  color: black;
+  padding: 1rem 1rem;
+}
+
+.grid-item{
+  display: flex;
+  gap: 5px;
+}
+
+.filter-icon-container{
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-icon-container:hover {
+  cursor: pointer;
+  transform: translateY(2px);
+}
+
+.filters-form{
+  display: grid;
+  gap: 1rem;
+  width: 10rem;
+  place-content: center;
+}
+
+.filters-container span{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    background: #22506C;
 }
 
 .applied-filter-container{
@@ -336,10 +382,24 @@ button, .btn {
   text-align: center;
 }
 
+.job-status{
+  display: flex;
+  align-items: center;
+  padding: 5px 16px;
+  border-radius: 12px;
+  border: 0.5px solid gray;
+}
+
+.status-icon{
+  width: 10px;
+    background: #0DC556;
+    border-radius: 50%;
+    height: 10px;
+}
+
 .selected-job-status{
   padding: 5px 10px;
   border-radius: 10px;
-  border: 0.5px solid gray;
   outline: none;
 }
 
@@ -417,7 +477,7 @@ button, .btn {
 }
 
 .suggested-sessions-container{
-  padding: 0 1.9rem 0 2.3rem;
+  padding: 1rem 1.9rem 0 2.3rem;
   border-radius: 12px;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.25);
 }
@@ -515,6 +575,7 @@ button, .btn {
     border-radius: 12px;
     justify-content: space-between;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    background: white;
 }
 
 .event-info{
