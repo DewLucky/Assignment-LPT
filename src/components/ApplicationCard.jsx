@@ -14,6 +14,7 @@ export default function ApplicationCard(props){
 
     const styled = props.currentStage.isRejected ? visible: inVisible;
     const processing = props.currentStage.inProcess.processing;
+    const imgSource = `../../images/`+ props.companyImage;
 
 
     return(
@@ -26,7 +27,7 @@ export default function ApplicationCard(props){
                         <div className="company-icon-container">
                             <img 
                             className="company-icon" 
-                            src={ `../../images/`+ props.companyImage} 
+                            src={imgSource} 
                             alt="" 
                             />
                         </div>
