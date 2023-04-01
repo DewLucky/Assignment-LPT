@@ -1,5 +1,5 @@
 import React from 'react'
-import pesto from '../../images/pesto.svg'
+import pesto from '/images/pesto.svg'
 
 export default function Upcoming(){
     return(

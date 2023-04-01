@@ -1,10 +1,10 @@
 import React from 'react'
-import hamburger from '../../images/hamburger.svg'
-import dashboard from '../../images/dashboard.svg'
-import myjobsIcon from '../../images/jobs-icon.svg'
-import messagesIcon from '../../images/messages.svg'
-import calander from '../../images/calander.svg'
-import logoutIcon from '../../images/logout.svg'
+import hamburger from '/images/hamburger.svg'
+import dashboard from '/images/dashboard.svg'
+import myjobsIcon from '/images/jobs-icon.svg'
+import messagesIcon from '/images/messages.svg'
+import calander from '/images/calander.svg'
+import logoutIcon from '/images/logout.svg'
 
 function Leftsidebar() {
     return (

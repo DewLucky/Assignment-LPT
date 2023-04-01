@@ -1,5 +1,4 @@
 import React from "react";
-import user from '../../images/account.png'
 import JobSearch from "./JobSearch";
 import MyJobs from "./MyJobs";
 import Suggested from "./Suggested";

@@ -1,5 +1,5 @@
 import React from 'react'
-import sessions from '../../images/sessions.svg'
+import sessions from '/images/sessions.svg'
 
 export default function Suggested(){
     return(

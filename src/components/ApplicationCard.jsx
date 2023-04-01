@@ -1,5 +1,5 @@
 import React from "react";
-import rejection from '../../images/rejection.svg'
+import rejection from '/images/rejection.svg'
 
 export default function ApplicationCard(props){
 
@@ -14,7 +14,7 @@ export default function ApplicationCard(props){
 
     const styled = props.currentStage.isRejected ? visible: inVisible;
     const processing = props.currentStage.inProcess.processing;
-    const imgSource = `../../images/`+ props.companyImage;
+    const imgSource = `images/`+ props.companyImage;
 
 
     return(

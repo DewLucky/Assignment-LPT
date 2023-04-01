@@ -1,12 +1,10 @@
 import React from "react";
-import messageFill from "../../images/message-fill.svg";
-import bellFill from "../../images/bell-fill.svg";
-import points from "../../images/points.svg";
-import userAcc from "../../images/account.png";
-import rocket from "../../images/rocket.png";
-import account from "../../images/account.png";
-import brand from '../../images/brand-logo.svg'
-import search from '../../images/search-icon.svg'
+import messageFill from "/images/message-fill.svg";
+import bellFill from "/images/bell-fill.svg";
+import points from "/images/points.svg";
+import account from "/images/account.png";
+import brand from '/images/brand-logo.svg'
+import search from '/images/search-icon.svg'
 
 const Header = () => {
   return (
